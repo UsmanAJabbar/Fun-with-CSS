@@ -1,0 +1,30 @@
+@import url("reset.css");
+
+:root {
+	--holberton-accent-color: #d1254e;
+}
+
+body {
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+a {
+	position: relative;					/* This allows the a element to the parent for the ::after absolute element */
+	text-decoration: none;
+	color: var(--holberton-accent-color);
+}
+a::after {
+	display: block;
+	position: absolute;
+	content: "";
+	width: 0;
+	height: 3px;
+	left: 0;
+	margin-top: 5px;
+	background: var(--holberton-accent-color);
+	transition: width .2s ease;
+}
+a:hover::after {
+	width: 100%;
+	background: var(--holberton-accent-color);
+}
